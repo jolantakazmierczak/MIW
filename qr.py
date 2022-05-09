@@ -8,14 +8,14 @@ A = np.array([
 ])
 
 
-print("A = ",A)
+print("A = \n",A)
 
 # 1. u1 = v1
 
 v1 = np.array(A[:, 0])
 v1 = v1.reshape(len(v1), 1)
 u1 = v1
-print("u1 = ", u1)
+print("u1 = \n", u1)
 
 # 2. e1 = u1/||u1||
 
@@ -25,7 +25,7 @@ for i in u1:
 u1_len = math.sqrt(u1_len)
 
 e1 = u1 / u1_len
-print("e1 = ",e1)
+print("e1 = \n",e1)
 
 # u2 = v2 - projekcjau1(v2)
 
@@ -35,7 +35,7 @@ projekcja = (np.transpose(v2) @ u1 / (np.transpose(u1) @ u1)) * u1
 projekcja
 
 u2 = v2 - projekcja
-print("u2 = ",u2)
+print("u2 = \n",u2)
 
 
 # e2 = u2/||u2||
@@ -47,18 +47,18 @@ u2_len = math.sqrt(u2_len)
 print(u2_len)
 
 e2 = u2 / u2_len
-print("e2 = ",e2)
+print("e2 = \n",e2)
 
 # Q = [e1 e2]
 
 Q = np.array(e1)
 Q = np.append(Q, e2, axis=1)
-print("Q = ",Q)
+print("Q = \n",Q)
 
 # R = Q^TA
 
 R = np.transpose(Q) @ A
-print("R = ",R)
+print("R = \n",R)
 
 # A = QR
 
