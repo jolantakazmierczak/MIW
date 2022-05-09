@@ -1,6 +1,7 @@
 import numpy as np
 import math
 
+
 A = np.array([
     [1,0],
     [1,1],

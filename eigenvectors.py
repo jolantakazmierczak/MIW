@@ -8,6 +8,7 @@ A = np.array([
 
 ])
 
+
 print("A = \n",A)
 w,v=eig(A)
 print('E-value:', w)
