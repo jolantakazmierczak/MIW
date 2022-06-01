@@ -20,25 +20,19 @@ for row in a:
     for y in row:
         temp+=abs(y)
     c.append(temp)
-#print(b)
+print(b)
 print(all(c==np.diag(b)))
 
-#macierz ortonormalna
 d = []
 for i in range(len(a[0])):
-    # row = []
-    # for x in a[i]:
-    #     row.append(x/m.sqrt(c[i]))
-    # d.append(row)
     d.append(a[i]*(1/m.sqrt(c[i])))
-d = np.array(d) #macierz ortonormalna
-print(d.T) #transpozycja ortonormalnej
-print(np.linalg.inv(d)) #odwrotna ortonormalna
-print(np.dot(d,np.linalg.inv(d))) #d * d^-1
+d = np.array(d)
+print(d.T)
+print(np.linalg.inv(d))
+print(np.dot(d,np.linalg.inv(d)))
 print(np.diag([1.,1.,1.,1.,1.,1.,1.,1.]).all()==np.dot(d,np.linalg.inv(d)).all())
 
-#zamiana baz
 ones = np.diag([1.,1.,1.,1.,1.,1.,1.,1.])
 va=np.array([8.,6.,2.,3.,4.,6.,6.,5.])
-vb=np.dot(d,va) #bo d już jest transponowane
+vb=np.dot(d,va)
 print(vb)
