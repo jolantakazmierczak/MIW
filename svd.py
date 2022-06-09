@@ -17,7 +17,6 @@ def svd(A):
 
     # Sigma
     sigmas = np.sqrt(lambdas_u)   # wyliczenie sigm poprzez boliczenie pierwiastków z lambd
-    print(sigmas)
 
 
     size = (len(A), len(A[0])) # obliczenie rozmiaru dla Sigma
